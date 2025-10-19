@@ -1,0 +1,53 @@
+<style>
+.artist-link {
+    display:flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 2px solid #333;
+    line-height: 22px;
+    position: relative;
+}
+
+.artist-sign {
+    font-size: 30px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.artist-description {
+    line-height: 22px;
+    margin-top: 15px;
+    transition:height 0.4s ease-out;
+    height:0;
+    overflow:hidden;
+}
+</style>
+
+<div id="pauline-lida"
+class="artist-link"
+onclick="toggleDescription('pauline-lida');"
+>
+    <div>
+        <div>PAULINE LIDA</div>
+        <div>CO-DIRECTRICE ARTISTIQUE</div>
+    </div>
+    <div id="pauline-lida-sign" class="artist-sign">+</div>
+</div>
+<div class="artist-description" id="pauline-lida-description">
+    Pauline Lida est chorégraphe et photographe. Elle est issue d’une formation classique puis contemporaine. Partie étudier la danse et la photographie argentique à New York, elle y travaille sur Sea of Ruin, pièce dansée sur la bateau des Nations-Unies pour sensibiliser à la montée des océans. Elle écrit ensuite Ecume, première pièce développée par le Collectif Minuit 12, qu’elle co-fonde. En 2022, elle réalise la série photo Buy two get one free à l’occasion du Black Friday dans laquelle les corps disparaissent sous des montagnes de tissu. Pauline est diplômée en sciences sociales et se consacre actuellement à la recherche-création.
+</div>
+
+<script>
+    function toggleDescription (artistId) {
+        let signElement = document.getElementById(artistId + '-sign');
+        let descriptionElement = document.getElementById(artistId + '-description');
+        if (signElement.textContent !== "+") {
+            signElement.textContent = "+";
+            descriptionElement.style.height = "0";
+        } else {
+            signElement.textContent = "-";
+            descriptionElement.style.height = "330px";
+        }
+    }
+</script>

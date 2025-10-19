@@ -1,0 +1,57 @@
+<style>
+.question-line {
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+
+.question-sign {
+    font-size: 30px;
+    color: #b4b8fc;
+}
+
+.question-label {
+    margin-left: 10px;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+
+.question-answer {
+    transition:max-height 0.8s linear;
+    max-height:0;
+    overflow:hidden;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: justify;
+    font-weight: normal;
+}
+
+</style>
+
+<div id="why-donation-useful"
+class="question-line"
+onclick="toggleAnswer('why-donation-useful');"
+>
+    <div id="why-donation-useful-sign" class="question-sign">+</div>
+    <div class="question-label">À quoi vont servir concrètement les dons ?</div>
+</div>
+<div class="question-answer" id="why-donation-useful-answer">
+    <div style="padding-bottom: 20px">Cette année, nous souhaitons embaucher une personne à temps plein pour gérer la production et l’administration du Collectif Minuit 12. Cela nous libérera du temps pour lancer ces projets et se consacrer à la création.</div>
+</div>
+
+<script>
+    function toggleAnswer (questionId) {
+        let signElement = document.getElementById(questionId + '-sign');
+        let answerElement = document.getElementById(questionId + '-answer');
+        if (signElement.textContent !== "+") {
+            signElement.textContent = "+";
+            answerElement.style.maxHeight = "0";
+        } else {
+            signElement.textContent = "-";
+            answerElement.style.maxHeight = "180px";
+        }
+    }
+</script>
