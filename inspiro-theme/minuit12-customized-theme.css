@@ -1,0 +1,467 @@
+/*
+CSS personnalisé, inséré dans le customizer de l'interface WordPress du site.
+*/
+
+body, .navbar-nav a, .page, .page-title, .entry-title, .elementor-heading-title, .hustle-ui:not(.hustle-size--small).module_id_1 .hustle-layout .hustle-group-content p:not([class*="forminator-"]), .hustle-ui:not(.hustle-size--small).module_id_1 .hustle-form button.hustle-button-submit, .hustle-ui:not(.hustle-size--small).module_id_1 .hustle-field .hustle-input, .entry-footer {
+	font-family: 'helvetica-neue-ligho' !important;
+}
+
+/* Permet à l'image hero de prendre toute la hauteur de la page */
+.elementor-518 .elementor-element.elementor-element-703c3c3 {
+	margin-top: -45px !important;
+}
+
+/* Corrige le décalage du haut du chevron depuis la nouvelle version du thème, attention bug spécifique à Windows donc on passe par un code JS regardant l'user agent pour l'appliquer*/
+.windows-os .navbar-nav .menu-item-has-children .svg-icon {
+		margin-top: 0.2em;
+	}
+.non-windows-os .navbar-nav .menu-item-has-children .svg-icon {
+		margin-top: -0.15em;
+	}
+
+
+/* Pour afficher en noir souligné les toggle de texte supplémentaire, comme les descriptions des artistes */
+.sh-link a span {
+	color: #333;
+	text-decoration: underline;
+}
+
+/* Taille des lignes dans le bloc description des artistes */
+.sh-content {
+	line-height: 22px;
+}
+
+/* On veut volontairement que le menu ne suive pas l'utilisateur au scroll */
+.site-header.headroom--not-top {
+	display: none;
+}
+
+
+/*Les icônes de réseaux sociaux en blanc sur le menu de la home, en noir sur les autres pages */
+.home .header-inner .fa-instagram, .home .header-inner .fa-youtube,
+.post-template-default .header-inner .fa-instagram,
+.post-template-default .header-inner .fa-youtube
+{
+	color: #FFF;
+}
+
+body:not(.home, .post-template-default) .header-inner .fa-instagram, body:not(.home, .post-template-default) .header-inner .fa-youtube   {
+	color: #333;
+}
+
+
+body:not(.home)bodnot(.home) .sbody:not(.home)f-ul:hover,	body:not(.home)  .menu-item-520:hover , body:not(.home) .menu-item-940:hover, body:not(.home) .menu-item-has-children:hover  {
+	border-top: 1px solid #333;
+}
+
+/* Mettre le menu hamburger en noir sur les pages autres que la home, ou la croix en noir si le menu est ouvert dans tous les cas */
+
+body:not(.home) .navbar-toggle .icon-bar, .side-nav-open .navbar-toggle .icon-bar {
+	background: #333;
+}
+
+.menu-item a:hover {
+	color: #ccc !important;
+}
+
+.navbar-nav, .navbar-nav > li > a:hover, .navbar-nav a,.navbar-nav > li > a.sf-with-ul:hover {
+	border-bottom: none;
+}
+
+/* Pour que le logo Youtube ne soit pas cassé à droite sur certaines tailles d'écran */
+@media screen and (min-width: 996px) {
+	.inner-wrap {
+  	max-width: 900px;
+	}
+
+	/* Pour que le déroulement du menu sur écran de bureau ne déborde pas sur le titre de la page */
+	.entry-header {
+		padding-top: 40px !important;
+	}
+
+
+	/* On souligne depuis le haut (et pas en bas) le menu de navigation sur écran de bureau */
+	.home .sf-with-ul:hover,	.home  .menu-item-520:hover , 	.home  .menu-item-940:hover, 	.home  .menu-item-has-children:hover,
+	.post-template-default .sf-with-ul:hover,	.post-template-default  .menu-item-520:hover , 	.post-template-default  .menu-item-940:hover, 	.post-template-default  .menu-item-has-children:hover
+
+	{
+		border-top: 1px solid #FFF;
+	}
+
+	body:not(.home, .post-template-default) .sf-with-ul:hover,	body:not(.home, .post-template-default)  .menu-item-520:hover ,
+	body:not(.home, .post-template-default)  .menu-item-940:hover,
+	body:not(.home,.post-template-default)  .menu-item-has-children:hover  {
+		border-top: 1px solid #333;
+	}
+
+	/* La barre de navigation doit s'afficher en noir sur les autres pages, en grand écran */
+
+body:not(.home, .single-post) .navbar-nav  ul li a  {
+		color: #333;
+	}
+
+
+/*Pour adapter le rendu des posts à ce qu'attend le collectif, sur écran de bureau*/
+#primary .post {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+/* Sur écran de bureau, réduire la taille de l'image*/
+#primary .post .post-thumbnail {
+	flex-basis: 40%;
+	flex-shrink: 0
+}
+
+	li.menu-item-4767 a {
+		min-width: 130px;
+		padding-left: 11px;
+		border-radius: 15px;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-top: 5px;
+	}
+
+
+body:not(.home, .post-template-default, .page-id-4762) li.menu-item-4767 a {
+	background-color: #222;
+	color: #FFF;
+}
+
+.home li.menu-item-4767 a, .post-template-default li.menu-item-4767 a {
+	background-color: #FFF;
+}
+	.home li.menu-item-4767 a, .post-template-default li.menu-item-4767 a, .home li.menu-item-4767 a, .post-template-default li.menu-item-4767 a:hover {
+		color: #222;
+	}
+
+}
+
+
+	.page-id-4762 li.menu-item-4767 a {
+		background-color: #b4b8fc;;
+		color: #FFF;
+	}
+
+body:not(.home, .single-post) #site-navigation
+{
+	background: none;
+		color: #333;
+}
+/* Pour que le logo soit plus à gauche sur grand écran de bureau */
+@media screen and (min-width: 1268px) {
+	.inner-wrap {
+  	max-width: 1150px;
+	}
+}
+
+/* Pour que le logo soit plus à gauche sur grand écran de bureau */
+@media screen and (min-width: 1700px) {
+	.inner-wrap {
+  	max-width: 1600px;
+	}
+}
+
+
+/* On adapte le menu à notre sauce visuelle */
+@media (min-width: 64.0625em) {
+
+	.sf-with-ul, .menu-item a {
+		font-size: 18px !important;
+	}
+
+	/* Le contenu des menus déroulants ne doit pas dépasser 1 ligne */
+	.menu-item .sub-menu a {
+		font-size: 15px !important;
+	}
+
+	/* Aligner verticalement les sous-menus (sans chevron) */
+	.navbar-nav ul {
+		background: none;
+		border-top: none;
+		margin-top: 0;
+		left: 0;
+		transform: none;
+	}
+
+	.navbar-nav ul li {
+		border-top: none;
+	}
+
+	.navbar-nav ul li a {
+			padding: 0;
+	}
+	.home .navbar-nav ul li a,
+	.post-template-default .navbar-nav ul li a {
+		color: #FFF;
+	}
+}
+
+@media (min-width: 40em) {
+	/* Sur écran de bureau, disposition du footer */
+	.site-info .copyright {
+		justify-content: space-between;
+	}
+
+	.site-info .copyright span {
+		flex: 0 0 25% !important;
+	}
+
+	.site-info .copyright span:nth-child(2) {
+		text-align: left;
+	}
+	.site-info .copyright span:nth-child(4) {
+		text-align: right;
+	}
+
+	/* Centrage du logo gero sur les interfaces non-mobiles*/
+	.site-branding-text > a {
+		margin-left: 5%;
+	}
+}
+
+/* Affichage de la partie des RS sur mobile */
+@media (max-width: 40em) {
+	.site-info .copyright span {
+		text-align: center;
+		flex: 0 0 100%;
+	}
+
+		/* Eviter un trop gros décalage entre titre et image pour les articles sur mobile*/
+	.post-thumbnail {
+		margin-bottom: 0;
+	}
+
+	/* Pas de marges pour l'encadré de NL sur mobile, car le resserre trop */
+	.hustle-ui.module_id_1 .hustle-layout .hustle-layout-body {
+		padding: 30px 0 0 0  !important;
+	}
+
+	/* Rendre le burger menu accessible meme en scrollant */
+	body:not(.home, .single-post) .site-header.headroom--not-top {
+		display: block;
+		background: #FFF;
+	}
+
+	/* Réduire la taille du logo sur mobile */
+	.custom-logo-link img {
+		max-width: 40px;
+	}
+}
+
+.navbar-nav > li > ul::before {
+	display: none;
+}
+
+/* Pour que le logo du site en haut à gauche de la home fasse la meme taille que sur les autres pages */
+body.home.title-tagline-hidden.has-header-image .custom-logo-link img, body.home.title-tagline-hidden.has-header-video .custom-logo-link img {
+	max-height: 80px
+}
+
+/* Pour rétrécir et rehausser un peu le logo au centre de la page */
+.elementor-518 .elementor-element.elementor-element-a1164c2 img {
+	width: 560px;
+}
+
+/* Pour rehausser le header de la home suite à l'ajout du logo */
+.header-navigation-wrapper {
+	margin-top: -30px;
+}
+
+.archive .site-main > article:not(.sticky)::after, .blog .site-main > article:not(.sticky)::after, .search .site-main > article:not(.sticky)::after, .entry-categories.cat-links, #primary .post .entry-content,  #primary .post .entry-summary {
+	display: none;
+}
+
+#primary .post .entry-title {
+	font-size: 1.2rem;
+}
+
+/* Rehaussement de la page de la NL */
+#post-2582 .entry-content {
+	margin-top: 0;
+}
+
+.hustle-ui.module_id_1 .hustle-main-wrapper, .hustle-ui:not(.hustle-size--small).module_id_1 .hustle-main-wrapper {
+	padding-top: 0 !important;
+}
+
+/* Pour éviter que le titre des actualités ne descende trop */
+.archive .page-title, .blog .page-title, .search .page-title {
+	margin-top: 0;
+}
+
+/* Pour que le footer ne paraisse plus "collé" aux images */
+footer {
+	margin-top: 150px;
+}
+
+/*supprimer les parties concernant les commentaires*/
+.entry-comments {
+	display: none !important;
+}
+
+
+/*Limiter l'espace entre l'image hero et le premier bloc de texte, malgré les ajouts de scripts etc*/
+.home .entry-content {
+	margin-top: 10px;
+}
+
+/* On retire la date sur les détails des articles, écrite dans un trop mauvais format */
+.post-template-default .entry-date {
+	display:none !important;
+}
+
+body:not(.home,.post-template-default) .navbar-nav .menu-item-has-children .svg-icon {
+	fill: #333;
+}
+
+/* Ne pas forcer les passages en majuscules des titres */
+.page .entry-title, .page-title {
+	text-transform: none;
+}
+
+/* Retrait de l'espace entre le titre et le sous-titre de la apge*/
+.page .entry-content, .page:not(.inspiro-front-page) .entry-footer {
+	margin-top: 0;
+}
+
+/* Retirer la date dans un mauvais format, sur la page listant les actualités */
+.entry-meta span + span::before {
+	content: "";
+}
+.entry-date.published {
+	display:none;
+}
+
+/* Retrait de la mention de l'auteur sur le détail d'un article, et de l'article précédent */
+.post-author {
+	display: none;
+}
+
+.previous-post-cover {
+	display: none;
+}
+
+/* On réduit la taille du titre des articles unitaires */
+.page .entry-cover-image .entry-header .entry-title, .single .entry-cover-image .entry-header .entry-title {
+	font-size: 1.8rem;
+}
+
+.post .entry-content p {
+	line-height: 20px
+}
+
+/* Pour que la couleur bleue n'affecte pas le survol des liens du footer */
+.site-info a:hover {
+	color: #FFF;
+}
+
+/* Pour mettre les légendes au centre de l'image */
+figure.wp-caption {
+	position: relative;
+	height: 550px;
+}
+
+figure.wp-caption img {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+figure.wp-caption figcaption {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	cursor: pointer;
+}
+
+/* Ne pas afficher le lien "modifier" sur la home qui parasite le centrage du logo, quand on est admin WP */
+.site-branding-text .edit-link {
+	display:none;
+}
+
+/* Sur tablette / mobile, les titres du menu mobile doivent etre noirs */
+@media screen and (max-width: 64em) {
+	.navbar-nav li a, .navbar-nav li li a {
+		color: #333;
+	}
+
+	.side-nav .navbar-nav li.menu-item-has-children > a .svg-icon:active, .side-nav .navbar-nav li.menu-item-has-children > a .svg-icon:hover {
+		fill: #333;
+	}
+}
+
+/* Rendre le menu sur mobile blanc */
+/* On réduit la largeur de la sidenav pour qu'elle ne prenne pas toute la page, meme pour les plus petits smartphones */
+@media screen and (max-width: 30em) {
+
+	.side-nav__scrollable-container {
+			background-color: #FFF;
+	}
+	.side-nav {
+			width: 290px;
+			border-left: 1px solid #ccc;
+	}
+
+	body.side-nav-open .site {
+		transform: translateX(-290px);
+	}
+}
+
+/*Corrige le bug qui souligne les élément du menu depuis wordpress 6.6 */
+:root :where(a:where(:not(.wp-element-button))) {
+	text-decoration: none;
+}
+
+@media screen and (max-width: 995px) {
+	li.menu-item-4767 a {
+		display: block;
+		border-radius: 25px;
+		text-align: center;
+		padding-bottom: 0;
+	}
+
+	li.menu-item-4767 a {
+		background-color: #222;
+		color: #FFF;
+	}
+}
+
+
+.cta-gift {
+	background-color: #b4b8fc;
+	color: #FFF;
+	padding: 0 10px;
+	border-radius: 10px;
+	display: inline-flex;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.cta-gift img {
+	margin-right: 5px;
+}
+
+.non-windows-os .cta-gift div {
+	margin-top: 4px;
+}
+
+/* Pour retirer des espacements parasites sur la page de dons */
+.elementor-widget:not(:last-child) {
+	margin-bottom: 0 !important;
+}
+
+/* Pour que l'image fleur de la page de soutien prenne bien toute la place à gauche */
+.wp-image-4440 {
+	display: block !important;
+}
+
+/* Pour que le bloc de texte de la section "l'équipe" ne déborde pas trop en largeur */
+.elementor-element-00aecf2 {
+	max-width: 550px;
+}
+
