@@ -1,4 +1,4 @@
-# Collectif Minuit 12 - Code source du thème site Web
+# Collectif Minuit 12 - Code source du site Web
 
 Code source du thème du site web du Collectif Minuit 12, accessible sur <https://collectif-minuit12.com/>
 
